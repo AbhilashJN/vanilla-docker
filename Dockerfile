@@ -1,4 +1,4 @@
-FROM php-apache:7.2
+FROM php:7.2-apache
 
 ENV VANILLA_VERSION 2.6.4
 ENV WEB_DOCUMENT_ROOT /app
