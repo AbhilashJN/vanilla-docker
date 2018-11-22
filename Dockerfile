@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install unzip
 RUN curl -fsSL -o vanilla.zip \
       "https://github.com/vanilla/vanilla/releases/download/Vanilla_${VANILLA_VERSION}/vanilla-${VANILLA_VERSION}.zip" \
  && rm -rf /app \
- && unzip vanilla.zip -d /usr/src/ \
+ && unzip vanilla.zip -d /usr/src/vanilla-${VANILLA_VERSION} \
  && mv /usr/src/vanilla-${VANILLA_VERSION} /app \
  && chmod +x /app \
  && mv /app/.htaccess.dist /app/.htaccess \
