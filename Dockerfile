@@ -3,6 +3,7 @@ FROM php:7.2-apache
 ENV VANILLA_VERSION 2.6.4
 ENV WEB_DOCUMENT_ROOT /app
 
+RUN sudo apt-get update && sudo apt-get install unzip
 RUN curl -fsSL -o vanilla.zip \
       "https://github.com/vanilla/vanilla/releases/download/Vanilla_${VANILLA_VERSION}/vanilla-${VANILLA_VERSION}.zip" \
  && rm -rf /app \
