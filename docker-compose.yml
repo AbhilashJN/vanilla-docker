@@ -6,6 +6,9 @@ web:
      - "80:80"
    links:
      - db
+   volumes:
+     - ./app:/var/www/html
+   restart: always
 
 db:
   image: mysql:5.7
