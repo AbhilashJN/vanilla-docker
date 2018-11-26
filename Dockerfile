@@ -11,3 +11,5 @@ RUN curl -fsSL -o vanilla.zip "https://github.com/vanilla/vanilla/releases/downl
 
 RUN unzip vanilla.zip -d /var/www/html \
     && rm vanilla.zip
+
+RUN chmod 777 /var/www/html/uploads && chmod 777 /var/www/html/conf
