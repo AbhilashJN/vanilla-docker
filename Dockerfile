@@ -12,4 +12,4 @@ RUN curl -fsSL -o vanilla.zip "https://github.com/vanilla/vanilla/releases/downl
 RUN unzip vanilla.zip -d /var/www/html \
     && rm vanilla.zip
 
-RUN /bin/bash -c 'chmod 777 /var/www/html/confchmod 777 /var/www/html/uploads;'
+ENTRYPOINT ["/bin/bash","-c","chmod 777 /var/www/html/uploads;chmod 777 /var/wwww/html/conf"]
