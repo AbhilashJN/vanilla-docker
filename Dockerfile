@@ -10,6 +10,6 @@ RUN apt-get update && apt-get install libpng-dev \
 RUN curl -fsSL -o vanilla.zip "https://github.com/vanilla/vanilla/releases/download/Vanilla_2.6.4/vanilla-2.6.4.zip"
 
 RUN unzip vanilla.zip -d /var/www/html \
-    && rm vanilla.zip
-
-RUN chmod 777 /var/www/html/uploads && chmod 777 /var/www/html/conf
+    && rm vanilla.zip \
+    && chmod 777 /var/www/html/uploads \
+    && chmod 777 /var/www/html/conf
